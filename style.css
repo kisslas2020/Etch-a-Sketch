@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    height: 50vh;
+    width: 50vw;
+}
+
+.cell {
+    border: 1px solid rgba(219, 225, 233, 0.473);
+    box-sizing: border-box;
+}
+
+.filled {
+    background-color: black;
+}
+
+button {
+    height: 25px;
+    width: 100px;
+}
