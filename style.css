@@ -2,17 +2,22 @@
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
     grid-template-columns: 2fr 4fr 1fr;
-    border: 1px solid red;
+}
+
+:root {
+    --repeatNumber : 15;
+    --redNumber: 0;
+    --greenNumber: 0;
+    --blueNumber: 0;
 }
 
 .grid {
     grid-area: 2/2/3/3;
     display: grid;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(var(--repeatNumber), 1fr);
+    grid-template-columns: repeat(var(--repeatNumber), 1fr);
     height: 300px;
     width: 300px;
-    border: 1px solid blue;
 }
 
 .cell {
@@ -21,13 +26,16 @@
 }
 
 .filled {
-    background-color: black;
+    background-color: rgb(var(--redNumber), var(--greenNumber), var(--blueNumber));
 }
 
 button {
     height: 25px;
     width: 100px;
-    grid-area: 2/1/3/2;
+    grid-area: 1/2/2/3;
     justify-self: center;
-    
+}
+
+.radio {
+    grid-area: 2/1/3/2;
 }
