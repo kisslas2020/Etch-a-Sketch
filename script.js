@@ -42,6 +42,7 @@ function clear() {
         grid.removeChild(c);
     });
     let side = prompt('Add number of squares per side for the new grid. The maximum is 100.', '100') * 1;
+    console.log(side);
     if (isNaN(side) || side > 100 || side < 1) {
         side = 100;
     }
